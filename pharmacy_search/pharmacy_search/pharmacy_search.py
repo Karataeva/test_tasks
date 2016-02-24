@@ -1,6 +1,8 @@
 ﻿import csv
 import math
 
+rad = 6372795 
+
 def distance(apteka, x, y):
     long_rad1 = apteka["longitude"]*math.pi/180.
     lat_rad1 = apteka["latitude"]*math.pi/180.
@@ -31,8 +33,6 @@ def readfile(filename):
         apteka = f.readline()
     f.close()
     return ap_list
-
-
 
 def count_distances(ap_list, x_coord, y_coord):
     for i in range(len(ap_list)):
